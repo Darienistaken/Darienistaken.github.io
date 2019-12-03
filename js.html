@@ -1,25 +1,25 @@
 <html>
 <head>
-        <style>
-                body {
-                    color: rgb(15, 236, 15);
-                    background-image: url("https://bit.ly/34OXT8f")
-                }
-            </style>
+<style>
+body {
+color: rgb(15, 236, 15);
+background-image: url("https://bit.ly/34OXT8f")
+}
+</style>
 <script language="javascript">
-    function Game(guess){
+function Game(guess){
 var randNumber = Math.ceil(Math.random()*10);
 var input = window.prompt("Choose a number from 1 - 10");
 alert(randNumber);
 if (input == randNumber) {
-    alert('You guessed correctly!')
+alert('You guessed correctly!')
 } else {
-    alert('You guessed incorrectly...')
+alert('You guessed incorrectly...')
 }
 }
 </script>
 <body>
-    <p>Click below to play a guessing game</p>
-    <button onclick="Game()">Guessing Game</button>
+<p>Click below to play a guessing game</p>
+<button onclick="Game()">Guessing Game</button>
 </body>
 </html>
