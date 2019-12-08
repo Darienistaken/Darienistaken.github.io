@@ -13,7 +13,77 @@
         </style>
     </head>
     <body>
-        <canvas></canvas>
-        <script src="canvas.js"></script>
+        <canvas id="myCanvas"></canvas>
+        <button type='button' onclick=Animate()>Animate</button> 
+        <script>
+            var canvas = document.querySelector('canvas');
+
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var c = canvas.getContext('2d');
+var elem = document.getElementById('myCavnas');
+
+// c.fillStyle(x, y, width, height);
+
+c.fillStyle = "red"
+c.fillRect(100, 100, 300, 100);
+c.fillStyle = "blue"
+c.fillRect(400, 100, 300, 100);
+c.fillStyle = "green"
+c.fillRect(700, 100, 300, 100);
+c.fillStyle = "brown"
+c.fillRect(125, 200, 50, 125);
+c.fillStyle = "brown"
+c.fillRect(325, 200, 50, 125);
+c.fillStyle = "brown"
+c.fillRect(425, 200, 50, 125);
+c.fillStyle = "brown"
+c.fillRect(625, 200, 50, 125);
+c.fillStyle = "brown"
+c.fillRect(725, 200, 50, 125);
+c.fillStyle = "brown"
+c.fillRect(925, 200, 50, 125);
+c.fillStyle = "black"
+c.fillRect(1000, 50, 150, 150);
+c.fillStyle = "white"
+c.fillRect(1025, 75, 20, 20);
+c.fillStyle = "white"
+c.fillRect(1100, 75, 20, 20);
+console.log(canvas);
+
+var y = 140
+
+//Animation
+function Animate() {
+    requestAnimationFrame(Animate);
+    c.fillStyle = "brown"
+    c.fillRect(85, y, 15, 15)
+    y += 0.5
+}
+
+
+// Line
+// (x, y);
+
+c.lineWidth = 5;
+c.beginPath();
+c.moveTo(50, 325);
+c.lineTo(1250, 325);
+c.strokeStyle = "purple"
+c.stroke();
+
+
+// Circle
+
+//c.beginPath();
+//c.arc(1500, 200, 50, 0, 2 * Math.PI);
+//c.fill("yellow")
+//c.strokeStyle = "black"
+//c.stroke();
+
+
+        </script>
     </body>
 </html>
